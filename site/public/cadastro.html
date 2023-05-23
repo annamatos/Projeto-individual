@@ -13,7 +13,7 @@
 
 
     <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="css/cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -28,57 +28,55 @@
                 <span id="mensagem_erro"></span>
             </div>
         </div>
-        <div class="container">
-            <div class="card card-cadastro">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario">
-
-                    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-
-                    <div class="campo">
-                        <span>Nome:</span>
+        <div class="geral">
+            <div class="card">
+                <span class="titulo">Bem-vindo!</span>
+                <div class="campos">
+                    <div class="lado-esquerdo">
+                    <div class="text">
+                        <p>Nome:</p>
                         <input id="nome_input" type="text" placeholder="Seu nome">
                     </div>
-                    <div class="campo">
-                        <span>Data de nascimento</span>
+                    <div class="text">
+                        <p>Data de nascimento</p>
                         <input id="dtNasc_input" type="date" placeholder="Data de nascimento">
                     </div>
-                    <div class="campo">
-                        <span>Gênero</span>
+                    <div class="text">
+                        <p>Gênero</p>
                         <input id="genero_input" type="text" placeholder="Informe seu gênero">
                     </div>
-                    <div class="campo">
-                        <span>Quantidade de PETs</span>
+                    <div class="text">
+                        <p>Quantidade de PETs</p>
                         <input id="qntpet_input" type="number" placeholder="Quantidade de PETs">
                     </div>
-                    <div class="campo">
-                        <span>E-mail:</span>
+                </div>
+                <div class="lado-direito">
+                    <div class="text">
+                        <p>E-mail:</p>
                         <input id="email_input" type="text" placeholder="meuemail@provedor.com">
                     </div>
-                    <div class="campo">
-                        <span>Senha:</span>
+                    <div class="text">
+                        <p>Senha:</p>
                         <input id="senha_input" type="password" placeholder="******">
                     </div>
-                    <div class="campo">
-                        <span>Confirmação da Senha:</span>
+                    <div class="text">
+                        <p>Confirmação da Senha:</p>
                         <input id="confirmacao_senha_input" type="password" placeholder="******">
                     </div>
                     <button class="botao" onclick="cadastrar()">Cadastrar</button>
-
+                    <div class="form-centro">
+                        Já tem uma conta? <a href="login.html"> Clique Aqui!</a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login"></div>
-            </div>
-        </div>
-    </div>
-
-
+          
 </body>
 
 </html>
