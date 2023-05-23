@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+.geral{
+    width: 100vw;
+    height: 100vh;
+    background: paleturquoise;
+}
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+.menu{
+    width: 18vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 3.5px solid;
+    border-radius: 15px;
+    padding-left: 1.5rem;
+}
