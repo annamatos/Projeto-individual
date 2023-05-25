@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css-usuario/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="geral">
+    <div class="grafico">
+      <p>Usuarios lalala</p>
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="grafico">
+      <p>quantidade de pet dos usuarios</p>
+      <canvas id="chartBar"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Feminino', 'Masculino', 'Não binário'],
+      datasets: [{
+        data: [50, 25, 25],
+        backgroundColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)', 'rgba(255, 206, 86, 0.8)'],
+        borderColor: 'rgba(255, 255, 255, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
+
+
+  var ctxBar = document.getElementById('chartBar').getContext('2d');
+  var chartBar = new Chart(ctxBar, {
+    type: 'bar',
+    data: {
+      labels: ['1 PET', '2 PET', '3 PET', '4 PET', '5++ PET'],
+      datasets: [{
+        label: 'Usuarios',
+        data: [5, 10, 8, 3, 6],
+        backgroundColor: 'rgba(0, 123, 255, 0.8)',
+        borderColor: 'rgba(0, 123, 255, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>

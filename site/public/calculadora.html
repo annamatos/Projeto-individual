@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <title>Calcule</title>
+</head>
+
+<body>
+
+    <div class="geral">
+        <div class="navbar">
+            <header class="header">
+                <a href="#inicio">logoo</a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Inicial</a></li>
+                        <li><a href="historias.html">Histórias</a></li>
+                        <li class="agora"><a href="#">Calculadora</a></li>
+                    </ul>
+                </nav>
+                <ul>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="campos">
+            <div class="container">
+                <div class="cachorro">
+                    <div class="titulo">
+                        <img src="imagens/dog.png" class="icone" alt="Ícone de cachorro ">
+                        <h1>Calcule a idade do seu cachorro:</h1>
+                    </div>
+                    <div class="info">
+                        <div class="text">
+                            <p>Nome doguinho:</p>
+                            <input type="text" id="input_nome">
+                        </div>
+                        <div class="text">
+                            <p>Porte:</p>
+                            <select id="meuSelect">
+                                <option value="0">Selecione</option>
+                                <option value="1">Pequeno</option>
+                                <option value="2">Médio</option>
+                                <option value="3">Grande</option>
+                            </select>
+
+                        </div>
+                        <div class="text">
+                            <p>Informe quantos anos ele vive:</p>
+                            <input type="number" id="input_anos">
+                        </div>
+
+                        <button onclick="calculoCachorro()" class="botao">Calcule</button>
+
+                        <div id="div_resultado"></div>
+
+                    </div>
+                </div>
+
+                <div class="gato">
+
+                    <div class="titulo">
+                        <img src="imagens/cat.png" class="icone" alt="Ícone de gato">
+                        <h1>Calcule a idade do seu gato:</h1>
+                    </div>
+
+                    <div class="info">
+                        <div class="text">
+                            <p>Nome do gato:</p>
+                            <input type="text" id="input_nomeGato">
+                        </div>
+                        <div class="text">
+                            <p>Informe quantos anos ele vive:</p>
+                            <input type="number" id="input_anosGato">
+                        </div>
+                        <button onclick="calculoGato()" class="botao">Calcule</button>
+                        <div id="div_resultadoGato"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="js/calculadora.js"></script>

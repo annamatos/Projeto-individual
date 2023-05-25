@@ -20,6 +20,17 @@
 
 <body>
     <div class="geral">
+        
+        
+    <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+
+
+
         <div class="card">
             <div class="left-login">
             </div>
@@ -40,6 +51,11 @@
                 </div>
             </div>
         </div>
+        <!-- <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif">
+        </div> -->
+
+        <div id="div_erros_login"></div>
     </div>
 
 </html>
@@ -48,14 +64,14 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert(`Mensagem de erro para todos os campos em branco`);
             finalizarAguardar();
             return false;
         }
@@ -90,7 +106,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "pgUsuario.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
