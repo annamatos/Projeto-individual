@@ -46,11 +46,13 @@ function calculoGato() {
         var idade = 25 + ((anos - 2) * 4)
     }
     
-    div_resultado.innerHTML = `<div class="resultado"> O seu gatinho ${nome} tem ${idade} anos humanos.`
+    div_resultado.innerHTML = `
+    <div class="resultado"> 
+    O seu gatinho ${nome} tem ${idade} anos humanos.</div>`
 
     if (anos <= 0) {
         alert(`Informe a idade do gato.`)
-        div_resultadoGato.innerHTML = ""
+        // div_resultadoGato.innerHTML = ""
     }
 
 }
