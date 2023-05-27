@@ -23,7 +23,7 @@ function calculoCachorro() {
             var idade = 16 + ((anos - 2) * 8);
         }
     }
-    div_resultado.innerHTML = `O ${nome} tem ${idade} anos humanos.`
+    div_resultado.innerHTML = `<div class="resultado"> O doguinho ${nome} tem ${idade} anos humanos.</div>`
 
     if (porte == 0) {
         alert(`Informe o porte do seu cachorro.`)
@@ -46,7 +46,7 @@ function calculoGato() {
         var idade = 25 + ((anos - 2) * 4)
     }
     
-    div_resultadoGato.innerHTML = `O ${nome} tem ${idade} anos humanos.`
+    div_resultado.innerHTML = `<div class="resultado"> O seu gatinho ${nome} tem ${idade} anos humanos.`
 
     if (anos <= 0) {
         alert(`Informe a idade do gato.`)
