@@ -8,7 +8,7 @@ margin: 0;
     background: rgb(238, 175, 226);
     display: flex;
 } 
-
+ 
 .container {
     width: 25vw;
     display: flex;
@@ -17,7 +17,7 @@ margin: 0;
     justify-content: center;
     align-items: center;
     margin: 50px;
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: rgba(29, 29, 29, 0.084);
 }
 .botao{
@@ -25,12 +25,17 @@ margin: 0;
     height: 30px;
     margin: 20px;
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 .text > input {
     width: 15vw;
-    height: 25px;
-    border-radius: 30px;
+    height: 30px;
+    border-radius: 10px;
     border: none;
     background: rgba(156, 157, 151, 0.604);
+}
+.cadastrado{
+    background-color: brown;
+    width: 50vw;
+    height: 100vh;
 }

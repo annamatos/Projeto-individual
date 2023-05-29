@@ -87,7 +87,7 @@ li {
 }
 
 .cachorro {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -98,7 +98,7 @@ li {
 }
 
 .gato {
-    display: flex;
+    display: none;
     /* background-color: rgba(255, 255, 255, 0.374); */
     justify-content: center;
     align-items: center;

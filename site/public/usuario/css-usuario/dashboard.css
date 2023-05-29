@@ -1,10 +1,41 @@
-.grafico{
-    display: flex;
-    width: 40vw;
-    height: 40vh;
-    flex-direction: column;
-    align-items: center;
+body{
+    margin: 0;
 }
 .geral {
     display: flex;
 }
+
+.container{
+    display: flex;
+    width: 82vw;
+    height: 100vh;
+    background-color: aqua;
+    flex-direction: column;
+
+}
+.div-top{
+display: flex;
+height: 50vh;
+}
+
+.div-botton{
+    display: flex;
+    height: 50vh;
+    }
+
+/* .grafico1{
+    display: flex;
+    width: 40vw;
+    height: 20rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+} */
+/* .grafico2{
+    display: flex;
+    width: 20px;
+    height: 20rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+} */
