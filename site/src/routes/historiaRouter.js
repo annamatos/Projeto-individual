@@ -8,7 +8,7 @@ const historiaController = require('../controllers/historiaController');
 // });
 
 // upload.single('foto') vai buscar no json alguma propriedade chamada foto 
-router.post('/cadastro', upload.single('foto'), (req, res) => {
+router.post('/cadastrohistoria', upload.single('foto'), (req, res) => {
   historiaController.salvarHistoria(req, res);
 });
 

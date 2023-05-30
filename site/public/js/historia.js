@@ -4,7 +4,7 @@ function enviarHistoria() {
     formData.append('nome', nome.value)
     formData.append('descricao', descricao.value)
 
-    fetch("/historias/cadastro", {
+    fetch("/historias/cadastrohistoria", {
       method: "POST",
       body: formData
     })
@@ -28,7 +28,7 @@ function enviarHistoria() {
     <div>
     <h1>${historia.nome}</h1>
     <p>${historia.descricao}</p>
-    <img src="assets/${historia.imagem}" width="400px" alt="">
+    <img src="../assets/${historia.imagem}" width="400px" alt="">
     </div>`
 
         })
