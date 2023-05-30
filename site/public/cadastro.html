@@ -42,7 +42,13 @@
                     </div>
                     <div class="text">
                         <p>Gênero</p>
-                        <input id="genero_input" type="text" placeholder="Informe seu gênero">
+                        <select id="generos">
+                            <option value="0">Selecione</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Não binário">Não binário</option>
+                        </select>
+                        <!-- <input id="genero_input" type="text" placeholder="Informe seu gênero"> -->
                     </div>
                     <div class="text">
                         <p>Quantidade de PETs</p>
@@ -85,6 +91,8 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
+        var genero_input = document.getElementById("generos");
+
         var nomeVar = nome_input.value;
         var dtNascVar = dtNasc_input.value;
         var generoVar = genero_input.value;

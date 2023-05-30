@@ -26,13 +26,17 @@ select * from historia;
 select * from historia join usuario 
 on fkUsuario = idUsuario; 
 
-
 -- select para grafico de usuarios
+select genero, count(genero) from usuario group by genero;
+
 select count(genero) from usuario where genero = 'Não binário';
 select count(genero) from usuario where genero = 'Feminino';
 select count(genero) from usuario where genero = 'Masculino';
 
--- select para graficos de quantidade de pets dos usuarios 
+-- select para graficos de quantidade de pets dos usuarios
+select count(qntPet) as usuariopet, qntPet from usuario group by qntPet;
+
+
 select count(qntPet) from usuario where qntPet = '1';
 select count(qntPet) from usuario where qntPet = '2';
 select count(qntPet) from usuario where qntPet = '3';

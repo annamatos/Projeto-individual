@@ -3,7 +3,7 @@ function calculoCachorro() {
     var anos = Number(input_anos.value);
     var selectElement = document.getElementById("meuSelect");
     var porte = selectElement.value;
-
+ 
     if (porte == 1) {
         if (anos <= 2) {
             var idade = (anos * 12.5)
