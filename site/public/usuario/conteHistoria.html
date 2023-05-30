@@ -35,14 +35,18 @@
                 <div class="card">
                 <div class="campos">
                     <p> Nome do pet:</p>
-                    <input type="text" placeholder="Informe o nome do PET">
+                    <input type="text" placeholder="Informe o nome do PET" name="nome" id="nome">
                 </div>
                 <div class="campos">
                     <p>Conte uma história:</p>
-                    <input class="input-historia" type="text">
+                    <input class="input-historia" type="text" name="descricao" id="descricao">
                 </div>
-                <input type="file" name="imagem" id="imagem">
-                <button class="botao">Enviar</button>
+                <input type="file" name="foto" id="foto">
+                <button class="botao" onclick="enviarHistoria()">Enviar</button>
+                
+                <input type="number" id="buscaInput">
+  <button onclick="buscarPeloId()">Buscar</button>
+  <div id="resulimg"></div>
             </div>
             </div>
         </div>
@@ -50,3 +54,4 @@
 </body>
 
 </html>
+<script src="../js/historia.js"></script>

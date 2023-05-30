@@ -21,8 +21,15 @@ fkUsuario int,
 constraint fkUsuario foreign key (fkUsuario) references usuario(idUsuario)
 );
 
-CREATE TABLE historia(
-idHistoria int primary key auto_increment,
-nome varchar(45),
-historia VARCHAR(10000) not null,
-imagem VARCHAR(500));
+
+create table historia (
+  id int primary key auto_increment,
+  nome varchar(45),
+  descricao varchar(10000),
+  imagem varchar(255)
+);
+
+
+select * from historia;
+
+-- drop table historia;
