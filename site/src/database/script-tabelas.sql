@@ -27,7 +27,7 @@ select * from historia join usuario
 on fkUsuario = idUsuario; 
 
 -- select para grafico de usuarios
-select genero, count(genero) from usuario group by genero;
+select genero, count(genero) as qntgenero from usuario group by genero;
 
 select count(genero) from usuario where genero = 'Não binário';
 select count(genero) from usuario where genero = 'Feminino';
