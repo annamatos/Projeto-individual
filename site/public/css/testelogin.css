@@ -15,14 +15,20 @@ body {
     width: 50vw;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: url(../imagens/teste-scottbaby.jpg);
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    background-image: url(../imagens/dogrosa.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
 
 }
-
+.btn-home{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    float: right;
+    margin: 10px;
+}
 .right-login {
     width: 50vw;
     height: 100%;
@@ -61,9 +67,8 @@ body {
     border-radius: 10px;
     padding: 15px;
     background: whitesmoke;
-    color: brown;
+    color: black;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px goldenrod;
     outline: none;
     box-sizing: border-box;
 }
@@ -75,6 +80,7 @@ body {
 
 .botao {
     width: 60%;
+    height: 20px;
     padding: 16px 0px;
     margin: 25px;
     border: none;
@@ -82,8 +88,11 @@ body {
     outline: none;
     cursor: pointer;
     font-weight: 800;
-    color: brown;
-    background: yellow;
+    color: rgb(29, 28, 28);
+    background: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {

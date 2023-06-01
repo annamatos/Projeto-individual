@@ -48,15 +48,13 @@
 <script>
 
   let proximaAtualizacao;
-  
-  let proximaAtualizacao2;
 
   window.onload = obterDadosGraficos();
 
   function obterDadosGraficos() {
     obterDadosGrafico(1),
-    obterDadosGrafico(2)
-  }
+    obterDadosGrafico2(1)}
+  
 
   function obterDadosGrafico(idUsuario) {
 
@@ -135,18 +133,18 @@
       document.getElementById(`myChartCanvas1`),
       config
     );
-    let myChart2 = new Chart(
-      document.getElementById(`myChartCanvas2`),
-      config
-    );
+    // let myChart2 = new Chart(
+    //   document.getElementById(`myChartCanvas2`),
+    //   config
+    // );
   }
 
 // segundo grafico
 
-function obterDadosGrafico(idUsuario) {
+function obterDadosGrafico2(idUsuario) {
 
-if (proximaAtualizacao2 != undefined) {
-  clearTimeout(proximaAtualizacao2);
+if (proximaAtualizacao != undefined) {
+  clearTimeout(proximaAtualizacao);
 }
 
 fetch(`/medidas/primeiras/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
@@ -216,12 +214,6 @@ const config = {
   type: 'doughnut',
   data: dados,
 };
-
-// Adicionando gráfico criado em div na tela
-let myChart = new Chart(
-      document.getElementById(`myChartCanvas1`),
-      config
-    );
 let myChart2 = new Chart(
   document.getElementById(`myChartCanvas2`),
   config
