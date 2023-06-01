@@ -3,9 +3,9 @@ const historiaModel = require('../models/historiaModel');
 
 function salvarHistoria(req, res) {
   const imagem = req.file.filename;
-  const {nome, descricao} = req.body
+  const {nome, descricao, fkUsuario} = req.body
 
-  const historia = { nome, descricao, imagem }
+  const historia = { nome, descricao, imagem, fkUsuario }
   
   historiaModel.salvarHistoria(historia)
   .then(resultado => {

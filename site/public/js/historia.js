@@ -3,6 +3,7 @@ function enviarHistoria() {
     formData.append('foto', foto.files[0])
     formData.append('nome', nome.value)
     formData.append('descricao', descricao.value)
+    formData.append('fkUsuario', sessionStorage.ID_USUARIO)
 
     fetch("/historias/cadastrohistoria", {
       method: "POST",
