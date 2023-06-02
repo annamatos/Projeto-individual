@@ -1,3 +1,15 @@
+function tipoCachorro(){
+        div_resultado.innerHTML = ""
+        cachorro.style.display = 'flex'
+        gato.style.display = 'none'
+    }
+
+function tipoGato(){
+        div_resultado.innerHTML = ""
+        cachorro.style.display = 'none';
+        gato.style.display = 'flex';   
+}
+
 function calculoCachorro() {
     var nome = input_nome.value;
     var anos = Number(input_anos.value);
@@ -52,7 +64,7 @@ function calculoGato() {
 
     if (anos <= 0) {
         alert(`Informe a idade do gato.`)
-        // div_resultadoGato.innerHTML = ""
+        div_resultado.innerHTML = ""
     }
 
 }

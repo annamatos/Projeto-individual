@@ -14,7 +14,7 @@ li {
 }
 
 .header {
-    background: rgba(0, 0, 0, 0.4);
+    background: #6cb0a8ec;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +32,12 @@ li {
 }
 
 .agora {
-    background: goldenrod;
+    background:#28877cec;
+    border-radius: 10px;
 }
 
 .geral {
-    background: burlywood;
+    background: #eeecec;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -49,14 +50,20 @@ li {
     width: 100vw;
     height: 95vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .container {
     display: flex;
     border-radius: 30px;
-    max-width: 90vw;
+    width: 40rem;
+    height: 32rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ADC9C5;
 }
 
 .titulo {
@@ -68,14 +75,18 @@ li {
     align-content: start;
 }
 
-.escolha {
-    width: 90vw;
+.escolher {
+    width: 100%;
     height: 10%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin: 30px;
-    margin-bottom: 2px;
+    justify-content: space-around;
+}
+.escolhendo{
+    display: flex;
+}
+.escolhendo2{
+    display: flex;
 }
 
 .icone-escolha {
@@ -109,14 +120,14 @@ li {
 }
 
 .resultado {
-    background-color: pink;
+    background-color: #28877cec;
     display: flex;
     width: 25vw;
-    height: 20vh;
+    height: 7vh;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    margin: 50px 30px;
+    /* margin: 10px; */
     /* flex-direction: column; */
 }
 
@@ -130,7 +141,7 @@ li {
 }
 
 .botao {
-    background-color: blue;
+    background-color: #28877cec;
     margin: 25px 0px;
     border: none;
     border-radius: 10px;
@@ -150,7 +161,7 @@ select {
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #333;
-    background-color: #fff;
+    background-color: #fff; 
 }
 
 option {

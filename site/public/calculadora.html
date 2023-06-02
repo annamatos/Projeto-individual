@@ -29,22 +29,15 @@
                 </ul>
             </header>
         </div>
-        <div class="escolha">
-            <h3>Escolha:</h3>
-            <div>
-                <img src="imagens/dog.png" id="cachorro" class="icone-escolha" alt="Ícone de cachorro ">
-                <img src="imagens/cat.png" id="gato" class="icone-escolha" alt="Ícone de gato">
-
-            </div>
-        </div>
         <div class="campos">
             <div class="container">
-
-                <div class="cachorro">
-                    <div class="titulo">
+                <div><h1>Calcular idade do seu:</h1></div>
+                <div class="escolher">
+                    <div class="escolhendo" onclick="tipoCachorro()"><img src="imagens/dog.png" width="55px" height="50px" alt=""><h2>Cachorro</h2></div>
+                    <div class="escolhendo2"  onclick="tipoGato()"><img src="imagens/cat.png" width="50px" height="50px" alt=""><h2>Gato</h2></div>
+                </div>
+                <div class="cachorro" id="cachorro">
                         <img src="imagens/dog.png" class="icone" alt="Ícone de cachorro ">
-                        <h1>Calcule a idade do seu cachorro:</h1>
-                    </div>
                     <div class="info">
                         <div class="text">
                             <p>Nome doguinho:</p>
@@ -70,11 +63,11 @@
                 </div>
 
 
-                <div class="gato">
+                <div class="gato" id="gato">
 
                     <div class="titulo">
                         <img src="imagens/cat.png" class="icone" alt="Ícone de gato">
-                        <h1>Calcule a idade do seu gato:</h1>
+                        <!-- <h1>Calcule a idade do seu gato:</h1> -->
                     </div>
 
                     <div class="info">
@@ -87,7 +80,6 @@
                             <input type="number" id="input_anosGato">
                         </div>
                         <button onclick="calculoGato()" class="botao">Calcule</button>
-
                     </div>
                 </div>
                 <div id="div_resultado"></div>
