@@ -1,13 +1,13 @@
 body {
     margin: 0;
 }
-/* 
+
 .navbar {
     border-bottom: 2px;
     width: 100vw;
 }
 
-a,
+a, 
 li {
     list-style: none;
     text-decoration: none;
@@ -34,10 +34,29 @@ li {
 .agora {
     background: goldenrod;
     border-radius: 30px;
-} */
+}
 
 .geral {
     background: blanchedalmond;
     width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seta{
+    margin: 15px;
+    width: 50px;
+}
+.card{
+    background-color: blueviolet;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 20px;
 }
