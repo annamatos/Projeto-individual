@@ -32,16 +32,19 @@
         <li><a href="../index.html">Sair</a></li>
       </div>
     </div>
-    <div class="container1">
-
+    <div class="telagraph">
       <div class="graph">
+        <h2>Quantidade de pets dos usuarios</h2>
         <canvas id="myChartCanvas1"></canvas>
       </div>
+
+      <div class="graph2">
+        <h2>Gêneros dos usuários</h2>
+        <canvas id="myChartCanvas2"></canvas>
+      </div>
+
     </div>
-    <div class="graph">
-      <canvas id="myChartCanvas2"></canvas>
-    </div>
-  </div>
+
 </body>
 
 </html>
@@ -94,9 +97,9 @@
     let dados = {
       labels: labels,
       datasets: [{
-        label: 'Pet',
+        label: ['usuario com'],
         data: [],
-        fill: false,
+        fill: true,
         borderColor: 'rgb(75, 192, 192)',
         backgroundColor: `#10564F`,
         tension: 0.1

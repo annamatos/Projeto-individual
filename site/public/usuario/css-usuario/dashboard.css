@@ -1,41 +1,46 @@
-body{
+body {
     margin: 0;
 }
+
 .geral {
     display: flex;
+    background-color: #f1f1f1;
 }
-
-.container{
-    display: flex;
-    width: 82vw;
-    height: 100vh;
-    background-color: aqua;
-    flex-direction: column;
-
-}
-.div-top{
-display: flex;
-height: 50vh;
-}
-
-.div-botton{
+/* 
+.div-top {
     display: flex;
     height: 50vh;
-    }
+}
 
-/* .grafico1{
+.div-botton {
     display: flex;
-    width: 40vw;
-    height: 20rem;
-    flex-direction: column;
-    align-items: center;
-    background-color: brown;
+    height: 50vh;
 } */
-/* .grafico2{
+
+.telagraph {
     display: flex;
-    width: 20px;
-    height: 20rem;
-    flex-direction: column;
+    width: 82vw;
+    justify-content: space-around;
     align-items: center;
-    background-color: red;
-} */
+}
+
+.graph{
+    width: 32rem;
+    height: 20rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 2px rgb(137, 137, 137);
+}
+.graph2{
+    width: 15rem;
+    height: 20rem;
+    box-shadow: 3px 3px 3px 2px rgb(137, 137, 137);
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

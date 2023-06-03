@@ -14,7 +14,7 @@
 <body>
     <div class="geral">
         <div class="menu">
-            <h2>Bem-vinde! Fulano</h2>
+            <h2>Olá, <div id="nomeUsuario">  </div></h2>
             <div class="button-atual">
                 <li><a href="pgUsuario.html">Inicial</a></li>
             </div>
@@ -35,3 +35,6 @@
 </body>
 
 </html>
+<script>
+    nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO
+</script>

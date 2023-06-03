@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
   },
   
   filename: (req, file, cb) => {
-    const extensaoArquivo = file.originalname.split('.')[1];
+    const extensaoArquivo = file.originalname.split('.')[1]; 
 
     const novoNomeArquivo = require('crypto')
       .randomBytes(64)

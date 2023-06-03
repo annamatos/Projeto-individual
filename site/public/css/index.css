@@ -1,9 +1,17 @@
+    /* :root {
+    color1 { #ff1d44 };
+    color2 { #fbebaf };
+    color3 { #74bf9d };
+    color4 { #56a292 };
+    color5 { #1c8080 };
+    } */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eeecec;
 }
+
 /* 
 a,
 li {

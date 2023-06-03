@@ -29,14 +29,37 @@
             </header>
         </div>
         <div class="container">
-            <div>
+            <div onclick="anterios()">
                 <img src="imagens/setaL.png" class="seta" alt="">
             </div>
-            <div class="card"></div>
-            <div><img src="imagens/setaR.png" class="seta" alt=""></div>
+            <div class="card" id="card">
+                <div class="historia">
+                    <div class="titulo" id="titulo">
+                        <span>titulo</span>
+                    </div>
+                    <div class="corpo" id="corpo">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nemo quibusdam
+                            repellendus quam? Vero nobis exercitationem ipsum tenetur, dolorum, odio libero ipsa
+                            corrupti voluptas ex maiores eum repudiandae eaque itaque? Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Voluptatibus quos asperiores at, rerum nobis, autem iste
+                            inventore commodi quia tenetur accusantium id quae modi cum? Facilis voluptates ex eos
+                            accusantium?</span>
+                            <div class="autor">
+                                <span>Anna Paula</span>
+                            </div>
+                    </div>
+                    
+                </div>
+                <div class="lado-direito">
+                    <div class="imagem"></div>
+                    <button class="botao" onclick="window.location.href = 'cadastro.html'">Conte sua história</button>
+                </div>
+            </div>
+            <div onclick="proxima()"><img src="imagens/setaR.png" class="seta" alt=""></div>
         </div>
 
     </div>
 </body>
 
 </html>
+<script src="js/historiaSite.js"></script>

@@ -21,7 +21,7 @@ li {
 .menu>h2 {
     display: flex;
     align-items: center;
-    color: bisque;
+    color: rgb(0, 0, 0);
     margin: 30px 0px;
 }
 

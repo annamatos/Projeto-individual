@@ -59,4 +59,72 @@ li {
     width: 70vw;
     height: 70vh;
     border-radius: 20px;
+    display: flex;
+}
+
+.historia{
+    width: 65%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    width: 100%;
+    height: 55px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+.titulo > span{
+    color: brown;
+    font-size: 40px;
+}
+.corpo{
+    width: 95%;
+    height: 80%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.corpo>span{
+    font-size: 20px;
+}
+.autor{
+    width: auto;
+    height: auto;
+    background-color: blueviolet; 
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.lado-direito{
+    width: 35%;
+    background-color: black ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.imagem{
+    width: 270px;
+    height: 300px;
+    background-color: blue;
+}
+.botao {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 800;
+    color: black;
+    background: rgb(111, 0, 255);
+    margin-top: 70px;
 }

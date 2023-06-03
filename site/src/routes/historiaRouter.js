@@ -12,9 +12,17 @@ router.post('/cadastrohistoria', upload.single('foto'), (req, res) => {
   historiaController.salvarHistoria(req, res);
 });
 
+router.post('/enviarhistoria', upload.single('foto'), (req, res) => {
+  historiaController.Historia(req, res);
+});
+
 router.get('/:id', upload.single('foto'), (req, res) => {
   historiaController.buscarhistoriaPeloId(req, res);
 });
 
-module.exports = router;
+router.get('/:idhistoriaEscolhida', upload.single('foto'), (req, res) => {
+  historiaController.exibirhistoriaPeloId(req, res);
+});
+
+module.exports = router; 
 

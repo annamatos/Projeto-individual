@@ -84,9 +84,21 @@ li {
 }
 .escolhendo{
     display: flex;
+    cursor: pointer;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-bottom: 2px solid #28877cec;
 }
 .escolhendo2{
     display: flex;
+    cursor: pointer;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-bottom: 2px solid #28877cec;
 }
 
 .icone-escolha {

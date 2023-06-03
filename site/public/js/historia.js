@@ -38,3 +38,24 @@ function enviarHistoria() {
         console.log(err);
       })
   }
+
+  function exibirPeloId() {
+    fetch(`/historias/${buscaInput.value}`, {
+      method: "GET"
+    })
+      .then(res => {
+        res.json().then(json => {
+          const historia = json[0];
+          resulimg.innerHTML = `
+    <div>
+    <h1>${historia.nome}</h1>
+    <p>${historia.descricao}</p>
+    <img src="../assets/${historia.imagem}" width="400px" alt="">
+    </div>`
+
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
