@@ -22,5 +22,5 @@ router.get('/:id', upload.single('foto'), (req, res) => {
   historiaController.exibirhistoriaPeloId(req, res);
 });
 
-module.exports = router; 
+module.exports = router;
 

@@ -6,6 +6,7 @@ body {
     display: flex;
     background-color: #f1f1f1;
 }
+
 /* 
 .div-top {
     display: flex;
@@ -26,7 +27,7 @@ body {
     padding-left: 20vw;
 }
 
-.graph{
+.graph {
     width: 32rem;
     height: 20rem;
     border-radius: 5px;
@@ -36,7 +37,8 @@ body {
     background-color: #fff;
     box-shadow: 3px 3px 3px 2px rgb(137, 137, 137);
 }
-.graph2{
+
+.graph2 {
     width: 15rem;
     height: 20rem;
     box-shadow: 3px 3px 3px 2px rgb(137, 137, 137);

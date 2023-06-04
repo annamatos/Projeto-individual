@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
 });
 router.get('/:id', upload.single('foto'), (req, res) => {
     historiaController.buscarhistoriaPeloId(req, res);
-  });
+});
 router.get("/listar", function (req, res) {
     avisoController.listar(req, res);
 });

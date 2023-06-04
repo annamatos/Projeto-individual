@@ -14,7 +14,7 @@
 <body>
     <div class="geral">
         <div class="menu">
-           <div id="nomeUsuario"></div>
+            <div id="nomeUsuario"></div>
             <div class="button-atual" onclick="window.location.href = 'conteHistoria.html'">
                 <li><a href="#">Conte uma história</a></li>
             </div>
@@ -25,7 +25,7 @@
             <div class="button-sair" onclick="window.location.href = '../index.html'">
                 <li><a href="../index.html">Sair</a></li>
             </div>
-            
+
         </div>
 
         <div class="container">
@@ -41,7 +41,7 @@
                 <div>
                     <input type="file" name="foto" id="foto">
                 </div>
-                
+
                 <button class="botao" onclick="enviarHistoria()">Enviar</button>
             </div>
         </div>
@@ -53,7 +53,7 @@
 <script src="../js/historia.js"></script>
 <script>
     nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
-    if(sessionStorage.ID_USUARIO == 1){
+    if (sessionStorage.ID_USUARIO == 1) {
         exclusiva.innerHTML = `<div class="button" style="width: 150px;" onclick="window.location.href = 'pag-exclusiva.html'">Escolher</div>`
     }
 </script>

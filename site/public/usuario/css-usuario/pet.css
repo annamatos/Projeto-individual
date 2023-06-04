@@ -1,5 +1,5 @@
-body{
-margin: 0;
+body {
+    margin: 0;
 }
 
 .geral {
@@ -7,8 +7,8 @@ margin: 0;
     height: 100vh;
     background: rgb(238, 175, 226);
     display: flex;
-} 
- 
+}
+
 .container {
     width: 25vw;
     display: flex;
@@ -20,21 +20,24 @@ margin: 0;
     border-radius: 10px;
     background-color: rgba(29, 29, 29, 0.084);
 }
-.botao{
+
+.botao {
     width: 60%;
     height: 30px;
     margin: 20px;
     border: none;
     border-radius: 10px;
 }
-.text > input {
+
+.text>input {
     width: 15vw;
     height: 30px;
     border-radius: 10px;
     border: none;
     background: rgba(156, 157, 151, 0.604);
 }
-.cadastrado{
+
+.cadastrado {
     background-color: brown;
     width: 50vw;
     height: 100vh;

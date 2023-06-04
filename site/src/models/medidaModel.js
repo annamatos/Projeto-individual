@@ -77,5 +77,5 @@ module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     buscarprimeirasMedidas,
-    
+
 }

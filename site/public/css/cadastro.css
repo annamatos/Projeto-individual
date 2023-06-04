@@ -24,7 +24,8 @@ body {
     border-radius: 30px;
     flex-direction: column;
 }
-.btn-home{
+
+.btn-home {
     width: 40px;
     height: 40px;
     position: relative;
@@ -70,6 +71,7 @@ body {
     align-items: center;
     padding-top: 20px;
 }
+
 select {
     width: 13rem;
     height: 33px;
@@ -81,6 +83,7 @@ select {
     color: #333;
     background-color: #fff;
 }
+
 .text>input {
     width: 13rem;
     height: 30px;

@@ -15,17 +15,17 @@
 <body onload="obterDadosGraficos()">
   <div class="geral">
     <div class="menu">
-      <div id="nomeUsuario"></div> 
+      <div id="nomeUsuario"></div>
       <div class="button" onclick="window.location.href = 'conteHistoria.html'">
-          <li><a href="#">Conte uma história</a></li>
+        <li><a href="#">Conte uma história</a></li>
       </div>
       <div class="button-atual" onclick="window.location.href = 'dashboard.html'">
-          <li><a href="dashboard.html">Sobre o site</a></li>
+        <li><a href="dashboard.html">Sobre o site</a></li>
       </div>
       <div class="button-sair" onclick="window.location.href = '../index.html'">
-          <li><a href="../index.html">Sair</a></li>
+        <li><a href="../index.html">Sair</a></li>
       </div>
-  </div>
+    </div>
     <div class="telagraph">
       <div class="graph">
         <h2>Quantidade de pets dos usuarios</h2>
@@ -45,7 +45,7 @@
 
 <script>
   nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`;
-  
+
   let proximaAtualizacao;
 
   window.onload = obterDadosGraficos();

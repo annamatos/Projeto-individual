@@ -22,13 +22,15 @@ body {
     background-position: center center;
 
 }
-.btn-home{
+
+.btn-home {
     width: 40px;
     height: 40px;
     position: relative;
     float: right;
     margin: 10px;
 }
+
 .right-login {
     width: 50vw;
     height: 100%;

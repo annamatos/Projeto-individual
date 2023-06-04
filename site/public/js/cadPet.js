@@ -1,10 +1,10 @@
-function cadastroPet(){
-    var pet={
+function cadastroPet() {
+    var pet = {
         nome: nomePet.value,
-        dtNasc:dtNascPet.value,
+        dtNasc: dtNascPet.value,
         tipo: tipoPet.value,
         raça: raçaPet.value
     }
     cadastrado.innerHTML += `${JSON.stringify(pet)}`
-alert(`cadastro do animal`)
+    alert(`cadastro do animal`)
 }

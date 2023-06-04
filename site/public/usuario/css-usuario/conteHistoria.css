@@ -1,12 +1,13 @@
 body {
     margin: 0;
 }
+
 .geral {
     width: 100vw;
     height: 100vh;
     background: #f1f1f1;
     display: flex;
-} 
+}
 
 .container {
     width: 80vw;
@@ -14,7 +15,8 @@ body {
     display: flex;
     margin-left: 30vw;
 }
-.card{
+
+.card {
     width: 40vw;
     display: flex;
     flex-direction: column;
@@ -25,6 +27,7 @@ body {
     background-color: rgba(29, 29, 29, 0.084);
     box-shadow: 3px 3px 3px 2px rgba(137, 137, 137, 0.885);
 }
+
 .campos>input {
     width: 25vw;
     height: 30px;
@@ -35,6 +38,7 @@ body {
     outline: none;
     box-sizing: border-box;
 }
+
 textarea {
     width: 25vw;
     height: 150px;

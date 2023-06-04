@@ -1,13 +1,13 @@
-function tipoCachorro(){
-        div_resultado.innerHTML = ""
-        cachorro.style.display = 'flex'
-        gato.style.display = 'none'
-    }
+function tipoCachorro() {
+    div_resultado.innerHTML = ""
+    cachorro.style.display = 'flex'
+    gato.style.display = 'none'
+}
 
-function tipoGato(){
-        div_resultado.innerHTML = ""
-        cachorro.style.display = 'none';
-        gato.style.display = 'flex';   
+function tipoGato() {
+    div_resultado.innerHTML = ""
+    cachorro.style.display = 'none';
+    gato.style.display = 'flex';
 }
 
 function calculoCachorro() {
@@ -15,7 +15,7 @@ function calculoCachorro() {
     var anos = Number(input_anos.value);
     var selectElement = document.getElementById("meuSelect");
     var porte = selectElement.value;
- 
+
     if (porte == 1) {
         if (anos <= 2) {
             var idade = (anos * 12.5)
@@ -57,7 +57,7 @@ function calculoGato() {
     } else {
         var idade = 25 + ((anos - 2) * 4)
     }
-    
+
     div_resultado.innerHTML = `
     <div class="resultado"> 
     O seu gatinho ${nome} tem ${idade} anos humanos.</div>`

@@ -6,11 +6,11 @@ const diretorio = 'public/assets/';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, diretorio) 
+    cb(null, diretorio)
   },
-  
+
   filename: (req, file, cb) => {
-    const extensaoArquivo = file.originalname.split('.')[1]; 
+    const extensaoArquivo = file.originalname.split('.')[1];
 
     const novoNomeArquivo = require('crypto')
       .randomBytes(64)
