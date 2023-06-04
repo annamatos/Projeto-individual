@@ -28,7 +28,7 @@ li {
     font-size: 800;
 }
 
-.agora {
-    background: goldenrod;
-    border-radius: 10px;
+.agora a {
+    color: #eeecec;
+    background: #28877cec;
 }

@@ -31,9 +31,9 @@ li {
     padding: .5rem 1rem;
 }
 
-.agora {
-    background: goldenrod;
-    border-radius: 30px;
+.agora a {
+    color: #eeecec;
+    background: #28877cec;
 }
 
 .geral {

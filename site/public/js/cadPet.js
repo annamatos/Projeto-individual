@@ -6,5 +6,5 @@ function cadastroPet(){
         raça: raçaPet.value
     }
     cadastrado.innerHTML += `${JSON.stringify(pet)}`
-alert(`cadastro dp animal`)
+alert(`cadastro do animal`)
 }
