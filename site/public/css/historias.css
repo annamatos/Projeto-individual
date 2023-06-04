@@ -58,13 +58,12 @@ li {
     background-color: blueviolet;
     width: 70vw;
     height: 70vh;
-    border-radius: 20px;
+    border-radius: 2px;
     display: flex;
 }
 
 .historia{
     width: 65%;
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
 }
@@ -72,7 +71,6 @@ li {
 .titulo{
     width: 100%;
     height: 55px;
-    background-color: blueviolet;
     display: flex;
     justify-content: center;
     padding-top: 15px;
@@ -84,39 +82,50 @@ li {
 .corpo{
     width: 95%;
     height: 80%;
-    background-color: blue;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 20px;
 }
-.corpo>span{
+.corpo > span{
     font-size: 20px;
 }
 .autor{
     width: auto;
     height: auto;
-    background-color: blueviolet; 
     display: flex;
     justify-content: end;
     padding-right: 30px;
+    margin-top: 20px;
+}
+.autor > span{
+    font-size: 20px;
 }
 
 .lado-direito{
     width: 35%;
-    background-color: black ;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 
 }
 .imagem{
     width: 270px;
-    height: 300px;
-    background-color: blue;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.imagem img{
+    max-width:250;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
 .botao {
+    margin-top: 20px;
+    margin-bottom: 15px;
     width: 200px;
     height: 50px;
     border: none;
@@ -126,5 +135,4 @@ li {
     font-weight: 800;
     color: black;
     background: rgb(111, 0, 255);
-    margin-top: 70px;
 }
