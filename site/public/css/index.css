@@ -74,19 +74,19 @@ li {
 
 section {
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 .curiosidade {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #eeecec;
 }
 
 .geral-curiosidade{
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,21 +99,47 @@ section {
 }
 .lado-esquerdo {
     display: flex;
-    width: 45%;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     color: black;
+    background-color: rgb(34, 212, 126);
+}
+
+.card-curio{
+    display: flex;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+}
+.card-curio2{
+    display: flex;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+.text{
+    width: 50%;
+    margin: 0px 30px;
+}
+.text > span{
+    font-size: 40px;
+}
+.text > p{
+    font-size: 20px;
 }
 
 .adotar {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    flex-direction: column;
 }
 
 .valores{
     width: 100%;
-    height: 30rem;
+    height: 20rem;
     background-color: blue;
     display: flex;
     align-items: center;
@@ -121,8 +147,8 @@ section {
 
 }
 .valores2{
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     background-color: darkorchid;
     display: flex;
     align-items: center;
@@ -130,4 +156,47 @@ section {
     border-radius: 10px;
     flex-direction: column;
 
+}
+.minha-hist{
+    display: flex;
+    margin: 30px;
+}
+.esquerda{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.text-hist > p{
+    font-size: 22px;
+}
+.botoes{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.botoes > button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+    background: rgb(111, 0, 255);
+    margin-top: 10px;
+}
+.direita{
+    width: 35%;
+    background-color: black;
+}
+footer{
+    background-color: pink;
+    display: flex;
+    width: 100%;
+    height: 15rem;
 }
