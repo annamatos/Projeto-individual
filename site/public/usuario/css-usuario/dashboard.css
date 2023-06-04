@@ -19,9 +19,11 @@ body {
 
 .telagraph {
     display: flex;
-    width: 82vw;
+    width: 80vw;
+    height: 100vh;
     justify-content: space-around;
     align-items: center;
+    padding-left: 20vw;
 }
 
 .graph{

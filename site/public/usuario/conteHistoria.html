@@ -14,14 +14,14 @@
 <body>
     <div class="geral">
         <div class="menu">
-            <h2>Olá, <div id="nomeUsuario">  </div></h2> 
+           <div id="nomeUsuario"></div>
             <div class="button-atual" onclick="window.location.href = 'conteHistoria.html'">
                 <li><a href="#">Conte uma história</a></li>
             </div>
             <div class="button" onclick="window.location.href = 'dashboard.html'">
                 <li><a href="dashboard.html">Sobre o site</a></li>
             </div>
-            <div id="exclusiva" class="button"></div>
+            <div id="exclusiva"></div>
             <div class="button-sair" onclick="window.location.href = '../index.html'">
                 <li><a href="../index.html">Sair</a></li>
             </div>
@@ -52,8 +52,8 @@
 </html>
 <script src="../js/historia.js"></script>
 <script>
-    nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
+    nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
     if(sessionStorage.ID_USUARIO == 1){
-        exclusiva.innerHTML = `<div class="button" onclick="window.location.href = 'pag-exclusiva.html'">Escolher</div>`
+        exclusiva.innerHTML = `<div class="button" style="width: 150px;" onclick="window.location.href = 'pag-exclusiva.html'">Escolher</div>`
     }
 </script>

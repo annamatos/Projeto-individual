@@ -15,7 +15,7 @@
 <body onload="obterDadosGraficos()">
   <div class="geral">
     <div class="menu">
-      <h2>Olá, <div id="nomeUsuario">  </div></h2> 
+      <div id="nomeUsuario"></div> 
       <div class="button" onclick="window.location.href = 'conteHistoria.html'">
           <li><a href="#">Conte uma história</a></li>
       </div>
@@ -44,7 +44,8 @@
 </html>
 
 <script>
-   nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
+  nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`;
+  
   let proximaAtualizacao;
 
   window.onload = obterDadosGraficos();

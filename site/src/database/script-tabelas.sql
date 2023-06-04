@@ -23,7 +23,7 @@ create table historia (
 );
 
 
-select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor, imagem from historia join usuario 
+select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor, imagem, fkUsuario from historia join usuario 
 on fkUsuario = idUsuario; 
 select count(nome) from historia;
 
