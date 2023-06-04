@@ -38,24 +38,21 @@ function enviarHistoria() {
         console.log(err);
       })
   }
-
+  var posicao = 1
   function exibirPeloId() {
-    fetch(`/historias/${buscaInput.value}`, {
+    fetch(`/historias/${posicao}`, {
       method: "GET"
     })
       .then(res => {
         res.json().then(json => {
           const historia = json[0];
-          resulimg.innerHTML = `
-    <div>
-    <h1>${historia.nome}</h1>
-    <p>${historia.descricao}</p>
-    <img src="../assets/${historia.imagem}" width="400px" alt="">
-    </div>`
-
+          titulo.innerHTML = `${historia.nome}`
+          corpo.innerHTML =`${historia.descricao}${historia.nomeAutor}`
+         
         })
       })
       .catch(err => {
         console.log(err);
       })
+      posicao++
   }

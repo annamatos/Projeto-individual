@@ -14,40 +14,35 @@
 <body>
     <div class="geral">
         <div class="menu">
-            <h2>Bem-vinde! Fulano</h2>
-            <div class="button">
-                <li><a href="pgUsuario.html">Inicial</a></li>
-            </div>
-            <div class="button">
-                <li> <a href="cadastroPet.html">Meus PETs</a></li>
-            </div>
-            <div class="button-atual">
+            <h2>Olá, <div id="nomeUsuario">  </div></h2> 
+            <div class="button-atual" onclick="window.location.href = 'conteHistoria.html'">
                 <li><a href="#">Conte uma história</a></li>
             </div>
-            <div class="button">
+            <div class="button" onclick="window.location.href = 'dashboard.html'">
                 <li><a href="dashboard.html">Sobre o site</a></li>
             </div>
-            <div class="button-sair">
+            <div id="exclusiva" class="button"></div>
+            <div class="button-sair" onclick="window.location.href = '../index.html'">
                 <li><a href="../index.html">Sair</a></li>
             </div>
+            
         </div>
 
         <div class="container">
             <div class="card">
                 <div class="campos">
-                    <p> Nome do pet:</p>
-                    <input type="text" placeholder="Informe o nome do PET" name="nome" id="nome">
+                    <p> Dê um título para sua história:</p>
+                    <input type="text" placeholder="Nome da história" name="nome" id="nome">
                 </div>
-                <div class="campos">
+                <div class="campo-historia">
                     <p>Conte uma história:</p>
-                    <input class="input-historia" type="text" name="descricao" id="descricao">
+                    <textarea type="text" name="descricao" id="descricao" maxlength="10000"></textarea>
                 </div>
-                <input type="file" name="foto" id="foto">
+                <div>
+                    <input type="file" name="foto" id="foto">
+                </div>
+                
                 <button class="botao" onclick="enviarHistoria()">Enviar</button>
-
-                <input type="number" id="buscaInput">
-                <button onclick="buscarPeloId()">Buscar</button>
-                <div id="resulimg"></div>
             </div>
         </div>
     </div>
@@ -56,3 +51,9 @@
 
 </html>
 <script src="../js/historia.js"></script>
+<script>
+    nomeUsuario.innerHTML = `${sessionStorage.NOME_USUARIO}`
+    if(sessionStorage.ID_USUARIO == 1){
+        exclusiva.innerHTML = `<div class="button" onclick="window.location.href = 'pag-exclusiva.html'">Escolher</div>`
+    }
+</script>

@@ -1,22 +1,90 @@
 body{
     margin: 0;
 }
-.geral{
-    width: 100vw;
-    height: 100vh;
-    background: paleturquoise;
-}
+
 a,
 li {
     list-style: none;
     text-decoration: none;
+    color: black;
 }
-/* .menu{
+
+.menu {
     width: 18vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-right: 3.5px solid;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.085);
+    position: fixed;
+}
+
+.menu>h2 {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    margin: 30px 0px;
+}
+
+.button {
+    width: 60%;
+    height: 40px;
+    margin: 15px 0px;
+    background-color: brown;
     border-radius: 15px;
-    padding-left: 1.5rem;
-} */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-atual {
+    width: 60%;
+    height: 40px;
+    margin: 15px 0px;
+    background-color: red;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-sair {
+    width: 60%;
+    height: 40px;
+    margin-top: 140px;
+    background-color: red;
+    border-radius: 15px;
+    border: 2px solid rgb(134, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.geral{
+    width: 100vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.container {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20vw;
+}
+
+.enviar{
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    height: 17rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}

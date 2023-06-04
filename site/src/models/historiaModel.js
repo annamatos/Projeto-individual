@@ -13,13 +13,15 @@ function Historia(historia) {
 }
 
 function buscarhistoriaPeloId(id) {
-  const instrucao = `select * from historia where id = ${id}`;
+  const instrucao = `select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor, imagem, fkUsuario from historia join usuario 
+  on fkUsuario = idUsuario where id = ${id}`;
 
   return database.executar(instrucao);
 }
 
-function exibirhistoriaPeloId(idhistoriaEscolhida) {
-  const instrucao = `select * from historiaEscolhida  where id = ${idhistoriaEscolhida}`;
+function exibirhistoriaPeloId(id) {
+  const instrucao = `
+  select * from historiaEscolhida where idhistoriaEscolhida = ${id}`;
 
   return database.executar(instrucao);
 }

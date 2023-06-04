@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css-usuario/pgUsuario.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="geral">
+    <div class="menu">
+       <div id="nomeUsuario"></div>
+      </h2>
+      <div class="button" onclick="window.location.href = 'conteHistoria.html'">
+        <li><a href="#">Conte uma história</a></li>
+      </div>
+      <div class="button" onclick="window.location.href = 'dashboard.html'">
+        <li><a href="dashboard.html">Sobre o site</a></li>
+      </div>
+      <div class="button-sair" onclick="window.location.href = '../index.html'">
+        <li><a href="../index.html">Sair</a></li>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1> Pagina destinada para ver e escolher as história do site</h1>
+      <div class="enviar">
+        <div class="card">
+          <div class="campos">
+            <p> Nome da historia</p>
+            <input type="text" placeholder="Informe o nome do PET" name="nome" id="nome">
+          </div>
+          <div class="campos">
+            <p>História:</p>
+            <textarea type="text" name="descricao" id="descricao" maxlength="10000"></textarea>
+          </div>
+          <div>
+          </div>
+          <p>Nome do autor</p>
+          <input type="text" name="nomeAutor" id="nomeAutor" placeholder="nomeAutor">
+        </div>
+        <div class="card">
+          <div >
+            <p>fk do autor</p>
+            <input type="text" name="fkUsuario" id="fkUsuario" placeholder="fkUsuario">
+          </div>
+          <div>
+            <input type="file" name="foto" id="foto">
+            <button class="botao" onclick="enviandoHistoria()">Enviar</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="number" id="buscaInput">
+        <button onclick="buscarPeloId()">Buscar</button>
+        <div id="resulimg"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  function enviandoHistoria() {
+    const formData = new FormData();
+    formData.append('foto', foto.files[0])
+    formData.append('nome', nome.value)
+    formData.append('descricao', descricao.value)
+    formData.append('nomeAutor', nomeAutor.value)
+    formData.append('fkUsuario', fkUsuario.value)
+
+
+    fetch("/historias/enviarhistoria", {
+      method: "POST",
+      body: formData
+    })
+      .then(res => {
+        alert(`História do site enviada com sucesso`)
+        // window.location = "./perfil.html"
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
+
+  function buscarPeloId() {
+    fetch(`/avisos/${buscaInput.value}`, {
+      method: "GET"
+    })
+      .then(res => {
+        res.json().then(json => {
+          const historia = json[0];
+          resulimg.innerHTML += `
+    <div>
+    <h1>${historia.titulo}</h1>
+    <h2>${historia.autor}</h2>
+    <p>${historia.historia} fk: ${historia.fkUsuario}</p>
+    <img src="../assets/${historia.imagem}" width="400px" alt="">
+    </div>`
+
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
+  nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
+</script>

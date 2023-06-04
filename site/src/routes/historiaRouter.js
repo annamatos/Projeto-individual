@@ -16,11 +16,9 @@ router.post('/enviarhistoria', upload.single('foto'), (req, res) => {
   historiaController.Historia(req, res);
 });
 
-router.get('/:id', upload.single('foto'), (req, res) => {
-  historiaController.buscarhistoriaPeloId(req, res);
-});
 
-router.get('/:idhistoriaEscolhida', upload.single('foto'), (req, res) => {
+
+router.get('/:id', upload.single('foto'), (req, res) => {
   historiaController.exibirhistoriaPeloId(req, res);
 });
 

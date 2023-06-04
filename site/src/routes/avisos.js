@@ -1,12 +1,15 @@
 var express = require("express");
 var router = express.Router();
-
 var avisoController = require("../controllers/avisoController");
+const upload = require('../config/configUpload'); // ARQUIVO COM A COFIGURAÇÃO DO UPLOAD
+const historiaController = require('../controllers/historiaController');
 
 router.get("/", function (req, res) {
     avisoController.testar(req, res);
 });
-
+router.get('/:id', upload.single('foto'), (req, res) => {
+    historiaController.buscarhistoriaPeloId(req, res);
+  });
 router.get("/listar", function (req, res) {
     avisoController.listar(req, res);
 });
