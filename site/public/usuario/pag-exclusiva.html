@@ -20,8 +20,8 @@
       <div class="button" onclick="window.location.href = 'dashboard.html'">
         <li><a href="dashboard.html">Sobre o site</a></li>
       </div>
-      <div class="button-sair" onclick="window.location.href = '../index.html'">
-        <li><a href="../index.html">Sair</a></li>
+      <div class="button-sair" onclick="window.location.href = 'feedHistorias.html'">
+        <li><a href="../index.html">ir para feed</a></li>
       </div>
     </div>
 
@@ -55,6 +55,7 @@
       </div>
       <div>
         <input type="number" id="buscaInput">
+        
         <button onclick="buscarPeloId()">Buscar</button>
         <div id="resulimg"></div>
       </div>
@@ -85,9 +86,12 @@
         console.log(err);
       })
   }
-
-  function buscarPeloId() {
-    fetch(`/avisos/${buscaInput.value}`, {
+  var qntHistoria = 3
+  for (var i = 1; i <= qntHistoria; i++) {
+var posicao = i
+  
+ function buscarPeloId() {
+    fetch(`/avisos/${posicao}`, {
       method: "GET"
     })
       .then(res => {
@@ -105,7 +109,8 @@
       })
       .catch(err => {
         console.log(err);
-      })
-  }
+      })}
+      buscarPeloId()
+    }
   nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
 </script>

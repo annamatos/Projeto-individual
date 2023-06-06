@@ -2,8 +2,7 @@ var database = require("../database/config");
 
 function listar() {
     console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
-    var instrucao = `select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor from historia join usuario 
-    on fkUsuario = idUsuario; 
+    var instrucao = `select count(idhistoriaEscolhida) from historiaEscolhida; 
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

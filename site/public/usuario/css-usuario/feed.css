@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+.geral {
+    width: auto;
+    height: auto;
+    background: #f1f1f1;
+    display: flex;
+}
+
+.container {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20vw;
+}
