@@ -12,8 +12,94 @@ body {
 .container {
     width: 70vw;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    padding-left: 20vw;
+    padding-left: 24vw;
+    padding-top: 40px;
+}
+
+.card {
+    width: 70vw;
+    height: auto;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.historia {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+.titulo {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.titulo>span {
+    color: brown;
+    font-size: 30px;
+}
+
+.corpo {
+    width: 95%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.corpo>span {
+    font-size: 18px;
+}
+
+.autor {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.autor>span {
+    font-size: 18px;
+}
+
+.lado-direito {
+    width: 35%;
+    display: flex;
+    align-items: center;
+
+}
+
+.imagem {
+    width: 270px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem img {
+    max-width: 250;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.teste{
+    width: auto;
+    height: auto;
+    padding: 40px;
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 1px solid;
 }

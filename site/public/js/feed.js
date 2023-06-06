@@ -1,26 +1,38 @@
-var qntHistoria = 1 
+var qntHistoria = 3
 for (var i = 1; i <= qntHistoria; i++) {
-var posicao = i
+  var posicao = i
 
-function buscarPeloId() {
-  fetch(`/avisos/${posicao}`, {
-    method: "GET"
-  })
-    .then(res => {
-      res.json().then(json => {
-        const historia = json[0];
-        feed.innerHTML += `
-  <div>
-  <h1>${historia.titulo}</h1>
-  <h2>${historia.autor}</h2>
-  <p>${historia.historia} fk: ${historia.fkUsuario}</p>
-  <img src="../assets/${historia.imagem}" width="400px" alt="">
-  </div>`
-
-      })
+  function buscarPeloId() {
+    fetch(`/avisos/${posicao}`, {
+      method: "GET"
     })
-    .catch(err => {
-      console.log(err);
-    })}
-    buscarPeloId()
+      .then(res => {
+        res.json().then(json => {
+          const historia = json[0];
+          feed.innerHTML += `
+          <div class="teste">
+          <div class="historia">
+        <div class="titulo" id="titulo">
+            <span>${historia.titulo}</span>
+        </div>
+        <div class="corpo" id="corpo">
+            <span>${historia.historia}</span>
+            <div class="autor">
+                <span>${historia.autor}</span>
+            </div>
+        </div>
+      </div>
+<div class="lado-direito">
+<div class="imagem" >
+<img src="../assets/${historia.imagem}" alt="">
+</div>
+</div>
+</div>`
+        })
+      })
+      .catch(err => {
+        console.log(err);
+      })
   }
+  buscarPeloId()
+}

@@ -8,15 +8,18 @@
     <link rel="shortcut icon" href="../imagens/logopet.png" type="image/x-icon">
     <link rel="stylesheet" href="css-usuario/feed.css">
     <link rel="stylesheet" href="css-usuario/menu.css">
-    <title>PETs | Cruzadinha</title>
+    <title>PETs | Feed aumor</title>
 </head>
 
-<body onload="buscarPeloId()">
+<body>
     <div class="geral">
         <div class="menu">
             <div id="nomeUsuario"></div>
-            <div class="button-atual" onclick="window.location.href = 'conteHistoria.html'">
-                <li><a href="#">Conte uma história</a></li>
+            <div class="button-atual" onclick="window.location.href = 'feedHistorias.html'">
+                <li><a href="#">Feed</a></li>
+            </div>
+            <div class="button" onclick="window.location.href = 'conteHistoria.html'">
+                <li><a href="conteHistoria.html">Conte uma história</a></li>
             </div>
             <div class="button" onclick="window.location.href = 'dashboard.html'">
                 <li><a href="dashboard.html">Sobre o site</a></li>
@@ -28,13 +31,19 @@
 
         </div>
 
-<div>           
-        <div class="container" id="feed">
-           
-        </div>
-</div>
-    </div>
+        <div>
+            <div class="container">
+                <div id="feed" class="card">
+
+                </div>            
+            </div>
 </body>
 
 </html>
 <script src="../js/feed.js"></script>
+<script>
+    nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
+    if (sessionStorage.ID_USUARIO == 1) {
+        exclusiva.innerHTML = `<div class="button" style="width: 150px;" onclick="window.location.href = 'pag-exclusiva.html'">Escolher</div>`
+    }
+</script>

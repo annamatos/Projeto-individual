@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../imagens/logopet.png" type="image/x-icon">
   <link rel="stylesheet" href="css-usuario/pgUsuario.css">
-  <title>Document</title>
+  <title>PETs | SB Admin</title>
 </head>
 
 <body>
@@ -14,19 +15,22 @@
     <div class="menu">
       <div id="nomeUsuario"></div>
       </h2>
+      <div class="button" onclick="window.location.href = 'feedHistorias.html'">
+        <li><a href="feedHistorias.html">Feed</a></li>
+    </div>
       <div class="button" onclick="window.location.href = 'conteHistoria.html'">
-        <li><a href="#">Conte uma história</a></li>
+        <li><a href="conteHistoria.html">Conte uma história</a></li>
       </div>
       <div class="button" onclick="window.location.href = 'dashboard.html'">
         <li><a href="dashboard.html">Sobre o site</a></li>
       </div>
-      <div class="button-sair" onclick="window.location.href = 'feedHistorias.html'">
+      <div class="button-sair" onclick="window.location.href = '../index.html'">
         <li><a href="../index.html">ir para feed</a></li>
       </div>
     </div>
 
     <div class="container">
-      <h1> Pagina destinada para ver e escolher as história do site</h1>
+      <h1> Pagina destinada para ver e escolher as histórias do site</h1>
       <div class="enviar">
         <div class="card">
           <div class="campos">
@@ -73,7 +77,9 @@
     formData.append('nomeAutor', nomeAutor.value)
     formData.append('fkUsuario', fkUsuario.value)
 
-
+if(nome.value =="" || descricao.value == "" || nomeAutor.value == "" || fkUsuario.value == ""){
+  alert(`Informe todos os campos`)
+} else{
     fetch("/historias/enviarhistoria", {
       method: "POST",
       body: formData
@@ -85,7 +91,9 @@
       .catch(err => {
         console.log(err);
       })
-  }
+  }}
+
+// 
   var qntHistoria = 3
   for (var i = 1; i <= qntHistoria; i++) {
 var posicao = i
@@ -100,8 +108,8 @@ var posicao = i
           resulimg.innerHTML += `
     <div>
     <h1>${historia.titulo}</h1>
-    <h2>${historia.autor}</h2>
-    <p>${historia.historia} fk: ${historia.fkUsuario}</p>
+    <h2>${historia.autor} <br>fk: ${historia.fkUsuario}</h2>
+    <p>${historia.historia} </p>
     <img src="../assets/${historia.imagem}" width="400px" alt="">
     </div>`
 
