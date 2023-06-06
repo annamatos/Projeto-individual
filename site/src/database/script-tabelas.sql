@@ -11,6 +11,7 @@ CREATE TABLE usuario (
 	senha VARCHAR(50) not null
 );
 select * from usuario;
+desc usuario;
 
 create table historia (
   id int auto_increment,
@@ -25,7 +26,7 @@ create table historia (
 
 select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor, imagem, fkUsuario from historia join usuario 
 on fkUsuario = idUsuario; 
-select count(nome) from historia;
+select count(nome) from historiaEscolhida;
 
 select * from historia join usuario 
 on fkUsuario = idUsuario; 
@@ -38,7 +39,7 @@ select count(genero) from usuario where genero = 'Feminino';
 select count(genero) from usuario where genero = 'Masculino';
 
 -- select para graficos de quantidade de pets dos usuarios
-select count(qntPet) as usuariopet, qntPet from usuario group by qntPet order by usuariopet;
+select count(qntPet) as usuariopet, qntPet from usuario group by qntPet order by usuariopet;              
 
 
 select count(qntPet) from usuario where qntPet = '1';
@@ -62,3 +63,9 @@ constraint pkhistoriaEscolhida primary key (idhistoriaEscolhida, fkUsuario)
 select * from historiaEscolhida where idhistoriaEscolhida = 1 ;
 select * from historiaEscolhida join usuario 
 on fkUsuario = idUsuario;
+select count(idhistoriaEscolhida) from historiaEscolhida;select count(idhistoriaEscolhida) from historiaEscolhida;
+
+-- modificações bd
+-- alter table usuario modify column qntPet varchar(10);
+-- select idUsuario, qntPet from usuario where qntPet = 4; 
+-- update usuario set qntPet ='4 pet' where idUsuario = 10;
