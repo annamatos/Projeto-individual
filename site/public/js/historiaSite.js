@@ -1,20 +1,21 @@
-var qntHistoria = 1
-
-// function quantID() {
-//   fetch("/historias/quantidade", {
+var qntHistoria = 2
+// contarL()
+// function contarL() {
+//   fetch(`/historias/contar`, {
 //     method: "GET"
 //   })
-//     .then(res => res.json())
-//     .then(json => {
-//       const quantidades = json[0];
-//       qntHistoria = quantidades.count;
-//       console.log(qntHistoria);
+//     .then(res => {
+//       res.json().then(json => {
+        
+//         var contando = json[0];
+//         var qntHistoriaa = contando.quant
+//         contador.log(qntHistoriaa)
+//       })
 //     })
 //     .catch(err => {
 //       console.log(err);
-//     });
-// }
-// quantID();
+//     })
+//   } 
 
 var listaHistorias = [];
 
@@ -67,4 +68,4 @@ fetch(`/historias/${posicao}`, {
     console.log(err);
   })
 } 
-exibirPeloId()
+

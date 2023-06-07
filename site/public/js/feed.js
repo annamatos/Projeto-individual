@@ -1,4 +1,4 @@
-var qntHistoria = 4
+var qntHistoria = 11
 
 // function quant(){
 // fetch(`/historias/qntHist`, {

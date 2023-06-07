@@ -26,9 +26,9 @@ function exibirhistoriaPeloId(id) {
   return database.executar(instrucao);
 }
 
-function quantidade() {
+function contar() {
   const instrucao = `
-  select count(idhistoriaEscolhida) as count from historiaEscolhida;`;
+  select count(nome) as quant from historiaEscolhida;`;
 
   return database.executar(instrucao);
 }
@@ -39,4 +39,4 @@ function qntHist() {
   return database.executar(instrucao);
 }
 
-module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia, quantidade, qntHist } 
+module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia, contar, qntHist } 

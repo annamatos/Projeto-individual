@@ -94,7 +94,7 @@ li {
 
 .titulo>span {
     color: brown;
-    font-size: 40px;
+    font-size: 34px;
 }
 
 .corpo {
@@ -103,11 +103,11 @@ li {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 20px;
+    margin: 16px;
 }
 
 .corpo>span {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .autor {
@@ -115,8 +115,8 @@ li {
     height: auto;
     display: flex;
     justify-content: end;
-    padding-right: 30px;
-    margin-top: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
 }
 
 .autor>span {

@@ -22,11 +22,13 @@ create table historia (
   foreign key (fkUsuario) references usuario(idUsuario),
   constraint pkid primary key (id, fkUsuario)
 );
-
+ select count(id) as count from historia;
+ 
+ select idhistoriaEscolhida from historiaEscolhida;
 
 select historia.nome as titulo, historia.descricao as historia, usuario.nome as autor, imagem, fkUsuario from historia join usuario 
 on fkUsuario = idUsuario; 
-select count(nome) from historiaEscolhida;
+select count(nome) as quant from historiaEscolhida;
 
 select * from historia join usuario 
 on fkUsuario = idUsuario; 
@@ -63,7 +65,8 @@ constraint pkhistoriaEscolhida primary key (idhistoriaEscolhida, fkUsuario)
 select * from historiaEscolhida where idhistoriaEscolhida = 1 ;
 select * from historiaEscolhida join usuario 
 on fkUsuario = idUsuario;
-select count(idhistoriaEscolhida) from historiaEscolhida;select count(idhistoriaEscolhida) from historiaEscolhida;
+select count(idhistoriaEscolhida) as count from historiaEscolhida;
+select count(idhistoriaEscolhida) from historiaEscolhida;
 
 -- modificações bd
 -- alter table usuario modify column qntPet varchar(10);

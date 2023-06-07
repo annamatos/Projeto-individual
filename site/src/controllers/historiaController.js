@@ -49,9 +49,9 @@ function exibirhistoriaPeloId(req, res) {
     });
 }
 
-function quantidade(req, res) {
+function contar(req, res) {
   // console.log(req.params.id);
-  historiaModel.quantidade()
+  historiaModel.contar()
     .then(resultado => {
       res.json(resultado);
     }).catch(err => {
@@ -75,4 +75,4 @@ function qntHist(req, res) {
   });
 }
 
-module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia, quantidade, qntHist } 
+module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia, contar, qntHist } 

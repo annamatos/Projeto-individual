@@ -73,6 +73,13 @@
      background-color: #28877cec;
  }
 
+ .card-curiosidade {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
  .card-curio {
      display: flex;
      height: 20rem;
@@ -87,6 +94,23 @@
      justify-content: center;
      background-color: #62a084;
  }
+
+ 
+ .text-geral {
+    width: 60%;
+    margin: 0px 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-geral>span {
+    font-size: 30px;
+}
+
+.text-geral>p {
+    font-size: 17px;
+}
 
  .text {
      width: 50%;
@@ -149,7 +173,10 @@
 
  .direita {
      width: 35%;
-     background-color: black;
+ }
+ .direita>img{
+    max-width: 333px;
+    max-height: 599px;
  }
 
  .footer {

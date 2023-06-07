@@ -20,8 +20,8 @@ router.get('/:id', upload.single('foto'), (req, res) => {
   historiaController.exibirhistoriaPeloId(req, res);
 });
 
-router.get('/quantidade', function (req, res){
-  historiaController.quantidade(req, res);
+router.get('/contar', (req, res) => {
+  historiaController.contar(req, res);
 });
 
 router.get('/qntHist', function (req, res){
