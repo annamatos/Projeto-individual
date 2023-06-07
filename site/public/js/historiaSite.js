@@ -1,20 +1,20 @@
 var qntHistoria = 1
 
-function quantID() {
-  fetch("/historias/quantidade", {
-    method: "GET"
-  })
-    .then(res => res.json())
-    .then(json => {
-      const quantidades = json[0];
-      qntHistoria = quantidades.count;
-      console.log(qntHistoria);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-}
-quantID();
+// function quantID() {
+//   fetch("/historias/quantidade", {
+//     method: "GET"
+//   })
+//     .then(res => res.json())
+//     .then(json => {
+//       const quantidades = json[0];
+//       qntHistoria = quantidades.count;
+//       console.log(qntHistoria);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//     });
+// }
+// quantID();
 
 var listaHistorias = [];
 

@@ -1,23 +1,23 @@
 var qntHistoria = 4
 
-function quant(){
-fetch(`/historias/qntHist`, {
-  method: "GET"
-})
-  .then(res => {
-    res.json().then(json => {
-      console.log(json);
-      const quantidade = json[0];
-       qntHistoria = quantidade.count
-      console.log(res)
-    })
-  })
-  .catch(err => {
-    console.log(err);
-  })
+// function quant(){
+// fetch(`/historias/qntHist`, {
+//   method: "GET"
+// })
+//   .then(res => {
+//     res.json().then(json => {
+//       console.log(json);
+//       const quantidade = json[0];
+//        qntHistoria = quantidade.count
+//       console.log(res)
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   })
 
-}
-quant() 
+// }
+// quant() 
 
 for (var i = 1; i <= qntHistoria; i++) {
   var posicao = i

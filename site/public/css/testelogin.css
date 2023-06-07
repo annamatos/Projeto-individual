@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
 body {
     margin: 0;
+    font-family:'poppins', 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
 }
-
 .geral {
     width: 100vw;
     height: 100vh;
-    background: #4E3E37;
+    background: #c6c8ca;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +51,7 @@ body {
 }
 
 .campos>h1 {
-    color: aqua;
+    color: rgb(25, 65, 65);
     font-weight: 800;
     margin: 0;
 }
@@ -91,7 +94,7 @@ body {
     cursor: pointer;
     font-weight: 800;
     color: rgb(29, 28, 28);
-    background: blueviolet;
+    background: #639fe9;
     display: flex;
     justify-content: center;
     align-items: center;
