@@ -39,6 +39,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    
 }
 
 .button-atual {
@@ -50,43 +52,174 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.button-atual:hover{
+    background-color: aqua;
+}
+.button:hover{
+    background-color: aqua;
 }
 
 .button-sair {
-    width: 60%;
+    width: 40%;
     height: 40px;
-    margin-top: 140px;
-    background-color: red;
+    margin-top: 140px;    
     border-radius: 15px;
     border: 2px solid rgb(134, 2, 2);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
+}
+.button-sair:hover{
+    width: 50%;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 15px;
 }
 
 .geral {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     background: #f1f1f1;
 }
 
-.container {
-    width: 80vw;
-    height: 100vh;
+.container1 {
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-left: 20vw;
 }
 
 .enviar {
-    width: 40rem;
+    width: 50rem;
+    height: auto;
     display: flex;
     justify-content: space-around;
-    height: 17rem;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+}
+textarea {
+    width: 20vw;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(206, 207, 202, 0.604);
+    margin: 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+.campos>input {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(156, 157, 151, 0.604);
+    margin: 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70vw;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
 }
 
 .card {
+    width: 70vw;
+    height: auto;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.historia {
+    width: 65%;
     display: flex;
     flex-direction: column;
+    padding-right: 40px;
+}
+
+.titulo {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.titulo>span {
+    color: brown;
+    font-size: 30px;
+}
+
+.corpo {
+    width: 95%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.corpo>span {
+    font-size: 18px;
+}
+
+.autor {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.autor>span {
+    font-size: 18px;
+}
+
+.lado-direito {
+    width: 35%;
+    display: flex;
+    align-items: center;
+
+}
+
+.imagem {
+    width: 270px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem img {
+    max-width: 250;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.teste{
+    width: auto;
+    height: auto;
+    padding: 40px;
+    display: flex;
+    padding-bottom: 50px;
+    border-bottom: 1px solid;
 }

@@ -34,6 +34,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    
 }
 
 .button-atual {
@@ -45,17 +47,34 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+.button-atual:hover{
+    background-color: aqua;
+}
+.button:hover{
+    background-color: aqua;
 }
 
 .button-sair {
-    width: 60%;
+    width: 40%;
     height: 40px;
-    margin-top: 140px;
-    background-color: red;
+    margin-top: 140px;    
     border-radius: 15px;
     border: 2px solid rgb(134, 2, 2);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
+}
+.button-sair:hover{
+    width: 50%;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 15px;
 }

@@ -26,4 +26,17 @@ function exibirhistoriaPeloId(id) {
   return database.executar(instrucao);
 }
 
-module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia } 
+function quantidade() {
+  const instrucao = `
+  select count(idhistoriaEscolhida) as count from historiaEscolhida;`;
+
+  return database.executar(instrucao);
+}
+function qntHist() {
+  const instrucao = `
+  select count(id) as count from historia;`;
+
+  return database.executar(instrucao);
+}
+
+module.exports = { salvarHistoria, buscarhistoriaPeloId, exibirhistoriaPeloId, Historia, quantidade, qntHist } 

@@ -1,12 +1,32 @@
+var qntHistoria = 1
+
+function quantID() {
+  fetch("/historias/quantidade", {
+    method: "GET"
+  })
+    .then(res => res.json())
+    .then(json => {
+      const quantidades = json[0];
+      qntHistoria = quantidades.count;
+      console.log(qntHistoria);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+quantID();
+
 var listaHistorias = [];
-var qntHistoria = 2
+
+var qntHistoria = qntHistoria;
+console.log(qntHistoria)
 
 for (var contador = 0; contador < qntHistoria; contador++) {
   var id = contador + 1
   listaHistorias.push(id)
 }
 
-var posicao = listaHistorias[0]
+var posicao = 1
 
 function proxima() {
   if(posicao <= listaHistorias.length){

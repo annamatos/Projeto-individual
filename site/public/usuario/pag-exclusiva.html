@@ -17,7 +17,7 @@
       </h2>
       <div class="button" onclick="window.location.href = 'feedHistorias.html'">
         <li><a href="feedHistorias.html">Feed</a></li>
-    </div>
+      </div>
       <div class="button" onclick="window.location.href = 'conteHistoria.html'">
         <li><a href="conteHistoria.html">Conte uma história</a></li>
       </div>
@@ -25,14 +25,14 @@
         <li><a href="dashboard.html">Sobre o site</a></li>
       </div>
       <div class="button-sair" onclick="window.location.href = '../index.html'">
-        <li><a href="../index.html">ir para feed</a></li>
+        <li><a href="../index.html">SAIR</a></li>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container1">
       <h1> Pagina destinada para ver e escolher as histórias do site</h1>
       <div class="enviar">
-        <div class="card">
+        <div class="campos">
           <div class="campos">
             <p> Nome da historia</p>
             <input type="text" placeholder="Informe o nome do PET" name="nome" id="nome">
@@ -41,13 +41,12 @@
             <p>História:</p>
             <textarea type="text" name="descricao" id="descricao" maxlength="10000"></textarea>
           </div>
-          <div>
-          </div>
-          <p>Nome do autor</p>
-          <input type="text" name="nomeAutor" id="nomeAutor" placeholder="nomeAutor">
+          
         </div>
-        <div class="card">
-          <div>
+        <div class="card1">
+          <div class="campos">
+            <p>Nome do autor</p>
+          <input type="text" name="nomeAutor" id="nomeAutor" placeholder="nomeAutor">
             <p>fk do autor</p>
             <input type="text" name="fkUsuario" id="fkUsuario" placeholder="fkUsuario">
           </div>
@@ -57,11 +56,11 @@
           </div>
         </div>
       </div>
-      <div>
-        <input type="number" id="buscaInput">
-        
-        <button onclick="buscarPeloId()">Buscar</button>
-        <div id="resulimg"></div>
+
+
+      <div class="container">
+        <div id="resulimg" class="card">
+        </div>
       </div>
     </div>
   </div>
@@ -77,48 +76,65 @@
     formData.append('nomeAutor', nomeAutor.value)
     formData.append('fkUsuario', fkUsuario.value)
 
-if(nome.value =="" || descricao.value == "" || nomeAutor.value == "" || fkUsuario.value == ""){
-  alert(`Informe todos os campos`)
-} else{
-    fetch("/historias/enviarhistoria", {
-      method: "POST",
-      body: formData
-    })
-      .then(res => {
-        alert(`História do site enviada com sucesso`)
-        // window.location = "./perfil.html"
+    if (nome.value == "" || descricao.value == "" || nomeAutor.value == "" || fkUsuario.value == "") {
+      alert(`Informe todos os campos`)
+    } else {
+      fetch("/historias/enviarhistoria", {
+        method: "POST",
+        body: formData
       })
-      .catch(err => {
-        console.log(err);
-      })
-  }}
+        .then(res => {
+          alert(`História do site enviada com sucesso`)
+          // window.location = "./perfil.html"
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+  }
 
-// 
+  // 
   var qntHistoria = 3
   for (var i = 1; i <= qntHistoria; i++) {
-var posicao = i
-  
- function buscarPeloId() {
-    fetch(`/avisos/${posicao}`, {
-      method: "GET"
-    })
-      .then(res => {
-        res.json().then(json => {
-          const historia = json[0];
-          resulimg.innerHTML += `
-    <div>
-    <h1>${historia.titulo}</h1>
-    <h2>${historia.autor} <br>fk: ${historia.fkUsuario}</h2>
-    <p>${historia.historia} </p>
-    <img src="../assets/${historia.imagem}" width="400px" alt="">
-    </div>`
+    var posicao = i
 
-        })
+    function buscarPeloId() {
+      fetch(`/avisos/${posicao}`, {
+        method: "GET"
       })
-      .catch(err => {
-        console.log(err);
-      })}
-      buscarPeloId()
+        .then(res => {
+          res.json().then(json => {
+            const historia = json[0];
+            resulimg.innerHTML += `
+    <div class="teste">
+            <div class="historia">
+              <div class="titulo" id="titulo">
+                <span>${historia.titulo} 
+                  </span>
+              </div>
+              <div class="autor">
+                  <span>${historia.autor} fkUsuario:${historia.fkUsuario}</span>
+                </div>
+              <div class="corpo" id="corpo">
+                <span>${historia.historia}</span>
+
+              </div>
+            </div>
+            <div class="lado-direito">
+              <div class="imagem">
+                <img src="../assets/${historia.imagem}" alt="">
+              </div>
+            </div>
+          </div>
+    `
+
+          })
+        })
+        .catch(err => {
+          console.log(err);
+        })
     }
+    buscarPeloId()
+  }
   nomeUsuario.innerHTML = `<h2>Olá,  ${sessionStorage.NOME_USUARIO}</h2>`
 </script>

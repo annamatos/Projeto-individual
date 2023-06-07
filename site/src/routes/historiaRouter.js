@@ -16,11 +16,18 @@ router.post('/enviarhistoria', upload.single('foto'), (req, res) => {
   historiaController.Historia(req, res);
 });
 
-
-
 router.get('/:id', upload.single('foto'), (req, res) => {
   historiaController.exibirhistoriaPeloId(req, res);
 });
+
+router.get('/quantidade', function (req, res){
+  historiaController.quantidade(req, res);
+});
+
+router.get('/qntHist', function (req, res){
+  historiaController.qntHist(req, res);
+});
+
 
 module.exports = router;
 
